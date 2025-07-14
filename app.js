@@ -2,12 +2,12 @@ import { createClient } from "https://cdn.jsdelivr.net/npm/@supabase/supabase-js
 
 const SUPABASE_URL = "https://esddtjbpcisqhfdapgpx.supabase.co";
 const SUPABASE_JWT = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVzZGR0amJwY2lzcWhmZGFwZ3B4Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTI0MTU1NDEsImV4cCI6MjA2Nzk5MTU0MX0.zrkh64xMd82DmPI7Zffcj4-H328JxBstpbS43pTujaI";
-export const supabase = createClient(SUPABASE_URL, SUPABASE_JWT, {
-  global: { headers: { Accept: "application/json" } }
-});
+
+// AcceptヘッダーはSupabase側が自動付与してくれるので、カスタム設定しない
+export const supabase = createClient(SUPABASE_URL, SUPABASE_JWT);
 
 const FIXED_ID = "00000000-0000-0000-0000-000000000001";
-const GAS_ENDPOINT = "https://script.google.com/macros/s/AKfycbxIn2YX-kvlTyO6RcQvIKTxqG1_FcGv1wEdYD3YIiB9xU7_Ux9aCrBVAcAUR-fqNHY_/exec"; // GASの公開URLに置き換え
+const GAS_ENDPOINT = "https://script.google.com/macros/s/AKfycbxIn2YX-kvlTyO6RcQvIKTxqG1_FcGv1wEdYD3YIiB9xU7_Ux9aCrBVAcAUR-fqNHY_/exec";
 
 const SCAN_COOLDOWN_MS = 1500;
 
