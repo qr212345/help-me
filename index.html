@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ババ抜き大会管理</title>
+
+  <link rel="stylesheet" href="./style.css" />
+  <script src="https://unpkg.com/html5-qrcode" type="text/javascript"></script>
+</head>
+<body>
+  <div id="app">
+    <div id="status" style="margin:8px 0;font-weight:bold;"></div>
+
+    <nav id="sidebar">
+      <h2>メニュー</h2>
+      <ul>
+        <li onclick="navigate('scan')">📷 QRコードスキャン</li>
+        <li onclick="navigate('ranking')">🥇 順位登録</li>
+        <li onclick="navigateToExternal('https://qr212345.github.io/fajjfiur/')">📊 レート表</li>
+        <li onclick="navigateToExternal('https://qr212345.github.io/asdfghjkl/')">🪑 座席情報</li>
+      </ul>
+    </nav>
+
+    <main id="mainContent">
+      <section id="scanSection" class="section">
+        <h2>QRコードスキャン</h2>
+        <div id="reader" style="width:320px;"></div>
+        <div id="messageArea"></div>
+        <div id="seatList"></div>
+        <button onclick="undoAction()">↩ Undo</button>
+        <button onclick="saveFullCSV()">📄 CSVで保存</button>
+        <button id="btnSave">☁ Driveに保存</button>
+        <button id="btnLoad">☁ Driveから読み込み</button>
+      </section>
+
+      <section id="rankingSection" class="section" style="display:none">
+        <h2>順位登録モード</h2>
+        <p>QRコードで座席を読み込んでください。</p>
+        <div id="rankingReader" style="width:320px;"></div>
+        <ul id="rankingList" class="draggable-list"></ul>
+        <button onclick="confirmRanking()">✅ 順位決定</button>
+      </section>
+    </main>
+  </div>
+
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
