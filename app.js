@@ -7,7 +7,7 @@ const SUPABASE_JWT = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZ
 export const supabase = createClient(SUPABASE_URL, SUPABASE_JWT);
 
 const FIXED_ID = "00000000-0000-0000-0000-000000000001";
-const GAS_ENDPOINT = "https://script.google.com/macros/s/AKfycbxIn2YX-kvlTyO6RcQvIKTxqG1_FcGv1wEdYD3YIiB9xU7_Ux9aCrBVAcAUR-fqNHY_/exec";
+const GAS_ENDPOINT = "https://script.google.com/macros/s/AKfycbx3es5QBEDyymVIx62kySMWX0GmF7dG3jCOeQwUOZTQj4qWmiqZSJAIabqU6Wiscn_b/exec";
 
 const SCAN_COOLDOWN_MS = 1500;
 
