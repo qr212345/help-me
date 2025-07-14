@@ -7,7 +7,7 @@ export const supabase = createClient(SUPABASE_URL, SUPABASE_JWT, {
 });
 
 const FIXED_ID = "00000000-0000-0000-0000-000000000001";
-const GAS_ENDPOINT = "https://script.google.com/macros/s/xxxxx/exec"; // GASの公開URLに置き換え
+const GAS_ENDPOINT = "https://script.google.com/macros/s/AKfycbxIn2YX-kvlTyO6RcQvIKTxqG1_FcGv1wEdYD3YIiB9xU7_Ux9aCrBVAcAUR-fqNHY_/exec"; // GASの公開URLに置き換え
 
 const SCAN_COOLDOWN_MS = 1500;
 
